@@ -1,0 +1,51 @@
+{
+  "name": "papa_api",
+  "version": "1.0.0",
+  "description": "A news sharing, social media platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createTable": "node src/db/db createTheTable",
+    "dropTable": "node src/db/db dropTheTable"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolumide-ng/PAPA_API.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "PaPa",
+    "ES-6"
+  ],
+  "author": "tolumide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolumide-ng/PAPA_API/issues"
+  },
+  "homepage": "https://github.com/tolumide-ng/PAPA_API#readme",
+  "dependencies": {
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "make-runnable": "^1.3.6",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.8.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0"
+  }
+}
