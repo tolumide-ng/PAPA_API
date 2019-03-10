@@ -19,13 +19,7 @@ pool.on('connect', () => { console.log('connected to the db'); });
 const createTheTable = async () => {
     try {
         await db.query(createTable.userTable);
-        await db.query(createTable.contactTable);
         await db.query(createTable.messagesTable);
-        await db.query(createTable.sentMessagesTable);
-        await db.query(createTable.inboxMessagesTable);
-        await db.query(createTable.draftMessagesTable);
-        await db.query(createTable.groupMembersTable);
-        await db.query(createTable.groupTable);
     } catch (err) {
         console.log(`${err.name}, ${err.message}`);
     }
@@ -34,13 +28,7 @@ const createTheTable = async () => {
 const dropTheTable = async () => {
     try {
         await db.query(dropTable.userTable);
-        await db.query(dropTable.contactTable);
         await db.query(dropTable.messagesTable);
-        await db.query(dropTable.sentMessagesTable);
-        await db.query(dropTable.inboxMessagesTable);
-        await db.query(dropTable.draftMessagesTable);
-        await db.query(dropTable.groupMembersTable);
-        await db.query(dropTable.groupTable);
     } catch(err) {
         console.log(`${err.name}, ${err.message}`)
     }

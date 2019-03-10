@@ -2,8 +2,20 @@ import express from 'express';
 import '@babel/polyfill';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
+import userRoutes from './usingDatabase/routes/usersRoutes';
+import messageRoutes from './usingDatabase/routes/messagesRoutes';
 
 const app = express();
+
+app.use(morgan('dev'));
+app.use((express.json()));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+// Routes 
+app.use('/api/v1/auth', userRoutes);
+app.use('/api/v1/messages', messageRoutes);
 
 
 // Basic home route
